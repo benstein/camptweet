@@ -70,8 +70,8 @@ module Camptweet
           # re-establish potentially lost connection to Twitter
           connect_to_twitter
         end
-        log.debug "Sleeping (10s)"
-        sleep 10
+        log.debug "Sleeping (60s)"
+        sleep 60
       end
     end
     
