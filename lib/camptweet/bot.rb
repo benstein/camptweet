@@ -1,5 +1,7 @@
 module Camptweet
   class Bot
+
+    SLEEP_DURATION = 600 #in seconds
     
     attr_accessor :twitter_users
     attr_accessor :twitter_search_terms
@@ -70,8 +72,8 @@ module Camptweet
           # re-establish potentially lost connection to Twitter
           connect_to_twitter
         end
-        log.debug "Sleeping (60s)"
-        sleep 60
+        log.debug "Sleeping (#{SLEEP_DURATION} seconds)"
+        sleep SLEEP_DURATION
       end
     end
     
